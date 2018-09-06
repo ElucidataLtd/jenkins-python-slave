@@ -18,7 +18,7 @@ RUN rm -rf /usr/bin/sqlite3 && \
 
 
 ENV LD_LIBRARY_PATH /usr/local/lib
-RUN python3.6 --version && sqlite3 --version && LD_LIBRARY_PATH=/usr/local/lib python3.6 -c "import sqlite3; print(sqlite3.sqlite_version)"
+RUN python3.6 --version && sqlite3 --version && python3.6 -c "import sqlite3; print(sqlite3.sqlite_version)"
 
 RUN ls /usr/local/lib/
 
