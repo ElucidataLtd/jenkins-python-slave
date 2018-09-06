@@ -20,8 +20,6 @@ RUN rm -rf /usr/bin/sqlite3 && \
 ENV LD_LIBRARY_PATH /usr/local/lib
 RUN python3.6 --version && sqlite3 --version && python3.6 -c "import sqlite3; print(sqlite3.sqlite_version)"
 
-RUN ls /usr/local/lib/
-
 # change user to non-root OpenShift usage
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME
